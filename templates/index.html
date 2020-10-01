@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    <h1>Provide the following Information</h1>
+<form action="{{ url_for('predict')}}" method="post">
+        <h2 class="name">Title of Udemy Course</h2>
+    <input class="title" type="text" name="title"><br>
+
+        <h2 class="name">Number of Subscribers</h2>
+    <input class="numSubscribers" type="number" name="numSubscribers"><br>
+
+    <h2 class ="name">Number of Reviews</h2>
+    <input class="numReviews" type="number" name="numReviews"><br>
+
+    <h2 class ="name">No of Lectures</h2>
+    <input class="numPublishedLectures" type="number" name="numPublishedLectures">
+
+    <h2 class ="name">Course Difficulty Category</h2>
+    <select name="instructionalLevel" id="instructionalLevel">
+        <option value="All Levels">All Levels</option>
+        <option value="Beginner Level">Beginner Level</option>
+        <option value="Intermediate Level">Intermediate Level</option>
+        <option value="Expert Level">Expert Level</option>
+    </select>
+        <h2 class ="Duration">Duration</h2>
+        <input class="Duration" type="number" name="Duration">
+    <select name="Duration_in_hours" id="Duration_in_hours">
+        <option value="hours">Hours</option>
+        <option value="minutes">Minutes</option>
+    </select>
+    <h2 class ="Price_in_Website">Price in Website</h2>
+    <input class="websitePrice" type="number" name="websitePrice">
+         <button id="sub" type="submit ">SUBMIT</button>
+
+</form>
+<h3>{{prediction}}</h3>
+</div>
+</body>
+</html>
